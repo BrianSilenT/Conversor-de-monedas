@@ -15,13 +15,17 @@ public class Principal {
     public static void main(String[] args) {
 
 
+        String apikey = System.getenv("Exchange_API_KEY");
+
         MenuPresentacion menu = new MenuPresentacion();
         System.out.println(menu.obtenerMenu());
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese su tipo de cambio ejemplo: USD, MXN, ARG");
         String cambio = scanner.next();
 
-        String direction = "https://v6.exchangerate-api.com/v6/c3f53235016ae4afdae7a201/latest/" + cambio;
+        String apiKey = System.getenv("EXCHANGE_API_KEY");
+        String direction = "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/" + cambio;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
