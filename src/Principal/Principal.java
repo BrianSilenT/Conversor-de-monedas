@@ -1,14 +1,4 @@
 package Principal;
-
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.Scanner;
 
 public class Principal {
@@ -54,7 +44,7 @@ public class Principal {
         if (tipos != null && tipos.conversion_rate() != null) {
             System.out.println("Tasa de conversión: " + tipos.conversion_rate());
             System.out.println("Moneda base: " + tipos.base_code());
-            System.out.println("Cambio: " + cambio + " → " + tipos.conversion_rate());
+            System.out.println("Cambio: " + cambio + " → " + tipos.conversion_result());
         } else {
             System.out.println("Error: No se pudo obtener la tasa de conversión.");
         }
