@@ -10,7 +10,7 @@
 
 # **Funciones**
 
-## Puedes clomar el repositorio.
+## Puedes clonar el repositorio.
 ## Una vez descargado ejecutalo en el IDE de tu preferencia.
 ## Solo sigue las instrucciones del menu y escoge alguna.
 ## Tendras siete alternativas seis fijas y una mas para escoger las monedas que desees.
