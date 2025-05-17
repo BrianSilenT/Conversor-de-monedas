@@ -1,4 +1,5 @@
 package Principal;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Principal {
@@ -18,7 +19,17 @@ public class Principal {
         System.out.println(menu.obtenerMenu());
 
         System.out.println("ingrese la opcion del menu que desea utilizar \n ");
-         decision = scanner.nextInt();
+
+        while (true){
+            try {
+                decision = scanner.nextInt();
+                break;
+            } catch (InputMismatchException e){
+                System.out.println("Error: Ingrese un numero valido");
+                scanner.next();
+            }
+        }
+
 
         if (decision >=1 && decision <= 7){
             switch (decision){
@@ -34,6 +45,9 @@ public class Principal {
                     destino = scanner.next();
                 }
             }
+        } else {
+            System.out.println("Ingrese un valor valido");
+            continue;
         }
 
             System.out.println("ingrese la cantidad de monedas que desa cambiar");
