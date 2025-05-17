@@ -29,8 +29,7 @@ public class Principal {
                 scanner.next();
             }
         }
-
-
+        
         if (decision >=1 && decision <= 7){
             switch (decision){
                 case 1 -> {cambio = "USD"; destino ="ARS"; }
